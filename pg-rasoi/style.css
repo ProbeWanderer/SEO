@@ -1,0 +1,142 @@
+/*
+Theme Name: PG Rasoi
+Theme URI: https://pgrasoi.online
+Author: PG Rasoi Team
+Author URI: https://pgrasoi.online
+Description: A lightweight, fast, accessible WordPress theme for hostel and PG room cooking, meal prep, and budget recipes in India. Built with clean semantic HTML5, zero bloated frameworks, and native Rank Math SEO compatibility.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pg-rasoi
+Tags: food, recipes, hostel, budget, meal-prep, accessibility-ready, custom-menu, featured-images, translation-ready
+
+PG Rasoi Theme - Handcrafted for maximum speed, Core Web Vitals excellence, and rich snippet SEO.
+*/
+
+/* ==========================================================================
+   CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+   ========================================================================== */
+:root {
+  /* Warm Saffron & Cardamom Color Palette */
+  --color-primary: #D95D0F;          /* Turmeric saffron - energetic, appetizing */
+  --color-primary-hover: #BF4D08;
+  --color-primary-light: #FFF2EB;
+  --color-primary-rgb: 217, 93, 15;
+
+  --color-secondary: #2D6A4F;        /* Fresh coriander/curry leaf green */
+  --color-secondary-hover: #22513C;
+  --color-secondary-light: #EBF5F0;
+
+  --color-accent: #E79E24;           /* Saffron gold */
+  --color-accent-light: #FFF8EB;
+
+  --color-veg: #2B8A3E;              /* Indian FSSAI green dot standard */
+  --color-egg: #E67700;              /* Indian amber/brown dot */
+  --color-nonveg: #C92A2A;           /* Indian red dot */
+
+  /* Neutral Backgrounds & Typography */
+  --color-bg: #FDFBF7;               /* Warm comforting off-white canvas */
+  --color-surface: #FFFFFF;          /* Pure white card container */
+  --color-surface-soft: #F6F2EC;     /* Subtle warm container */
+  --color-border: #E8E2D8;           /* Soft muted border */
+  --color-border-subtle: #F0ECE4;
+  
+  --color-text-main: #1C242C;        /* Rich dark slate (passes WCAG AAA) */
+  --color-text-muted: #566472;       /* High-contrast secondary text */
+  --color-text-subtle: #7A8998;      /* Meta labels */
+  --color-text-inverse: #FFFFFF;
+
+  /* Typography Scale */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-md: 1.125rem;    /* 18px */
+  --font-size-lg: 1.25rem;     /* 20px */
+  --font-size-xl: 1.5rem;      /* 24px */
+  --font-size-2xl: 1.875rem;   /* 30px */
+  --font-size-3xl: 2.25rem;    /* 36px */
+  --font-size-4xl: 3rem;       /* 48px */
+
+  --line-height-tight: 1.2;
+  --line-height-base: 1.6;
+  --line-height-loose: 1.8;
+
+  /* Layout Spacing */
+  --space-2xs: 0.25rem;   /* 4px */
+  --space-xs: 0.5rem;     /* 8px */
+  --space-sm: 0.75rem;    /* 12px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.5rem;     /* 24px */
+  --space-xl: 2rem;       /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-3xl: 4rem;      /* 64px */
+
+  /* Radii & Elevation */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(33, 37, 41, 0.04), 0 1px 2px rgba(33, 37, 41, 0.03);
+  --shadow-md: 0 4px 14px rgba(33, 37, 41, 0.06), 0 1px 3px rgba(33, 37, 41, 0.04);
+  --shadow-lg: 0 12px 30px rgba(33, 37, 41, 0.08), 0 3px 8px rgba(33, 37, 41, 0.03);
+  --shadow-focus: 0 0 0 3px rgba(217, 93, 15, 0.35);
+
+  --max-width: 1200px;
+  --max-width-narrow: 840px;
+  --transition-fast: 180ms ease;
+  --transition-normal: 260ms ease;
+}
+
+/* ==========================================================================
+   SIMPLE DARK MODE (Auto System Preference + Manual Class)
+   ========================================================================== */
+[data-theme="dark"] {
+  --color-bg: #12161A;
+  --color-surface: #1B2228;
+  --color-surface-soft: #232B33;
+  --color-border: #2C3742;
+  --color-border-subtle: #242E37;
+  
+  --color-text-main: #F2F5F8;
+  --color-text-muted: #A0B0BF;
+  --color-text-subtle: #798A9B;
+
+  --color-primary-light: rgba(217, 93, 15, 0.15);
+  --color-secondary-light: rgba(45, 106, 79, 0.2);
+  --color-accent-light: rgba(231, 158, 36, 0.18);
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 14px 34px rgba(0, 0, 0, 0.45);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #12161A;
+    --color-surface: #1B2228;
+    --color-surface-soft: #232B33;
+    --color-border: #2C3742;
+    --color-border-subtle: #242E37;
+    
+    --color-text-main: #F2F5F8;
+    --color-text-muted: #A0B0BF;
+    --color-text-subtle: #798A9B;
+
+    --color-primary-light: rgba(217, 93, 15, 0.15);
+    --color-secondary-light: rgba(45, 106, 79, 0.2);
+    --color-accent-light: rgba(231, 158, 36, 0.18);
+
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 14px 34px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* Base styles are loaded via assets/css/main.css for clean modularity */

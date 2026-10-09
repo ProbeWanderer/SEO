@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <!-- Brand Icon -->
+  <rect x="6" y="8" width="44" height="44" rx="12" fill="url(#brandGrad)"/>
+  <!-- Steaming Pot / Kettle Symbol -->
+  <path d="M18 34C18 38.4183 21.5817 42 26 42H30C34.4183 42 38 38.4183 38 34V28H18V34Z" fill="#FFFFFF"/>
+  <path d="M16 28H40C41.1046 28 42 27.1046 42 26C42 24.8954 41.1046 24 40 24H16C14.8954 24 14 24.8954 14 26C14 27.1046 14.8954 28 16 28Z" fill="#FFFFFF"/>
+  <!-- Steam Curves -->
+  <path d="M23 21C22 19 24 17 23 15" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M28 20C27 18 29 16 28 14" stroke="#FFE3D1" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M33 21C32 19 34 17 33 15" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Brand Typography -->
+  <text x="60" y="33" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" fill="#1C242C">PG <tspan fill="#D95D0F">Rasoi</tspan></text>
+  <text x="61" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" letter-spacing="1.2" fill="#7A8998">HOSTEL &amp; PG MEAL PREP</text>
+
+  <defs>
+    <linearGradient id="brandGrad" x1="6" y1="8" x2="50" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D95D0F"/>
+      <stop offset="1" stop-color="#E79E24"/>
+    </linearGradient>
+  </defs>
+</svg>
